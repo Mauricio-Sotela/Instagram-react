@@ -1,4 +1,6 @@
 import React from "react";
+import Menu from "./components/Menu";
+import Header from "./components/Header";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -8,7 +10,8 @@ export default class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1 className="container">Hi I am React</h1>
+        <Menu />
+        <Header />
       </React.Fragment>
     );
   }
