@@ -1,6 +1,8 @@
 import React from "react";
 import Menu from "./components/Menu";
 import Header from "./components/Header";
+import logo from './images/logo.png'
+import userPict from './images/maurcio.jpg'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -10,7 +12,7 @@ export default class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Menu />
+        <Menu logo={logo} userPict={userPict} />
         <Header />
       </React.Fragment>
     );

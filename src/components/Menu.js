@@ -1,36 +1,32 @@
-import React, { Component } from "react";
-import logo from "../images/logo.png";
-import mauricio from "../images/maurcio.jpg";
+import React from "react";
 import icon from "./Icons";
-export default class Menu extends Component {
-  render = () => (
+import { Button, Avatar } from "@material-ui/core";
+
+export default function Menu(props) {
+  return (
     <React.Fragment>
       <nav className="navbar navbar-dark bg-light d-flex justify-content-between border border-secondary">
-        <div>
-          <a href="#">
-            <img src={logo} alt="logo" />
-          </a>
-        </div>
-        <div>
-          <input
-            class="form-control mr-sm-2 text-center"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </div>
-        <div>
-          {icon("fas fa-home")}
-          {icon("far fa-paper-plane")}
-          {icon("fas fa-compass")}
-          {icon("fas fa-heart")}
-          <a href="#">
-            <img
-              src={mauricio}
-              alt="Mauricio"
-              style={{ width: "30px", borderRadius: "50%" }}
+        <div className="container">
+          <div>
+            <a href="#">
+              <img src={props.logo} alt="logo" />
+            </a>
+          </div>
+          <div>
+            <input
+              class="form-control mr-sm-2 text-center"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
             />
-          </a>
+          </div>
+          <div className='menu__icons'>
+            {icon("fas fa-home")}
+            {icon("far fa-paper-plane")}
+            {icon("fas fa-compass")}
+            {icon("fas fa-heart")}
+            <Avatar src={props.userPict} alt="Mauricio" />
+          </div>
         </div>
       </nav>
     </React.Fragment>
