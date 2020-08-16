@@ -1,5 +1,47 @@
+.MuiAvatar-root {
+  width: 150px;
+  height: 150px;
+}
+.channel__div {
+  width: 100%;
+  border: 2px solid;
 
-.MuiAvatar-root{
-    width: 150px;
-    height: 150px;
+  .chanel__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .chanel__name {
+    font-family: "Roboto";
+    padding: 0.5rem;
+    margin-right: 5%;
+  }
+  .follow {
+    width: fit-content;
+    max-width: 136px;
+    height: fit-content;
+    color: rgb(27, 25, 25);
+    padding: 0.3rem 3rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .similar__pages {
+    display: flex;
+    align-items: center;
+    margin: 0 0.6rem;
+    padding: 0.2rem;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    background-color: #0095f6;
+  }
+  .dots {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.3rem;
+    .material-icons {
+      font-size: 36px;
+    }
+  }
 }

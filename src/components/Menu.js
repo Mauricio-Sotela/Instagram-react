@@ -14,7 +14,7 @@ export default function Menu(props) {
           </div>
           <div>
             <input
-              class="form-control mr-sm-2 text-center"
+              className="form-control mr-sm-2 text-center"
               type="search"
               placeholder="Search"
               aria-label="Search"
