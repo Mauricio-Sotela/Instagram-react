@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import { user } from "../components/userData.json";
-import logo from "../images/mainLogo.jpg";
-import icons from "../components/Icons";
-
+import Post__container from "./Post__container";
 export default function Header(props) {
   const [follow, setFollow] = useState({
     follow: "Follow",
@@ -17,7 +14,7 @@ export default function Header(props) {
         style: {
           backgroundColor: "transparent",
           color: "black",
-          border: `1px solid black`,
+          border: `1px solid #6e6e6e`,
         },
       });
     } else {
@@ -34,17 +31,21 @@ export default function Header(props) {
       {/* TOP DIV */}
       <div className="row">
         {/* LEFT---LOGO */}
-        <div className="col-sm-4">
+        <div className="col-sm-4 logo__container">
           <div>
-            <img src={logo} alt="logo" style={{ borderRadius: "50%" }} />
+            <img
+              src={props.data.user.logo}
+              alt="logo"
+              style={{ borderRadius: "50%" }}
+            />
           </div>
         </div>
         {/* RIGHT-- INFO AND ICONS */}
         <div className="col-sm-8 d-flex flex-column">
           {/* CHANNEL_NAME... */}
           <div className="channel__div">
-            <div className='chanel__container'>
-              <h1 className="chanel__name">{props.chanel__name}</h1>
+            <div className="chanel__container">
+              <h1 className="chanel__name">{props.data.user.channel__name}</h1>
               <span
                 className="follow"
                 style={follow.style}
@@ -63,15 +64,37 @@ export default function Header(props) {
             </div>
           </div>
           {/* POSTS-FOLLOWERS-FOLLOWING */}
-          <div></div>
+          <div className="user__info">
+            <div className="pots">
+              <strong>{props.data.user.posts}</strong>Posts
+            </div>
+            <div className="followers">
+              <strong>{props.data.user.followers}</strong>Followers
+            </div>
+            <div className="following">
+              <strong>{props.data.user.following}</strong>Following
+            </div>
+          </div>
           {/* CHANEL_INFO- */}
-          <div></div>
+          <div className="channel__info">
+            <h4>{props.data.user.info__title}</h4>
+            <ul>
+              {props.data.user.info__text.map((item) => {
+                return <li>{item}</li>;
+              })}
+            </ul>
+          </div>
           {/* SIMILAR_PAGES */}
           <div></div>
         </div>
       </div>
-      {/* BOTTOM DIV */}
-      <div></div>
+      {/* POSTS- DIV */}
+      <div className="container posts__div">
+        
+        <div className="card__container">
+          <Post__container data={props.data} />
+        </div>
+      </div>
     </div>
   );
 }

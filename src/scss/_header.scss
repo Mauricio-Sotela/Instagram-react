@@ -2,9 +2,13 @@
   width: 150px;
   height: 150px;
 }
+.logo__container {
+  display: flex;
+  justify-content: center;
+}
+// CHANNEL INFO
 .channel__div {
   width: 100%;
-  border: 2px solid;
 
   .chanel__container {
     width: 100%;
@@ -43,5 +47,64 @@
     .material-icons {
       font-size: 36px;
     }
+  }
+}
+//  USER INFO-FOLLOWERS-POSTS
+.user__info {
+  display: flex;
+
+  div {
+    margin-right: 1rem;
+    strong {
+      margin: 0 0.3rem;
+      font-weight: 900;
+    }
+  }
+}
+// CHANNEL__INFO
+.channel__info {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+// Post__container component
+.card__container {
+  width: 100%;
+  // post__card component
+  .post__navigation {
+    width: 100%;
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      cursor: pointer;
+      li {
+        margin-right: 2rem;
+        a {display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          color: black;
+         
+        }
+      }
+    }
+  }
+}
+
+// POST__CARD COMPONENT
+.post__card{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .card{
+    width: 30%;
+    height: cal(width(30%));
+    margin: 1%;
   }
 }
