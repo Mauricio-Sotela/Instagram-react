@@ -41,3 +41,7 @@ yarn-error.log*
 /.changelog
 .npm/
 dist
+
+
+# picData.json
+picData.json

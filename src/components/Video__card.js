@@ -9,7 +9,7 @@ export default function Posts__card(props) {
     },
   });
   const hoverIn = () => {
-    alert('555555')
+    alert('HoverIn')
     setHover({
       style: {
         display: "flex",
@@ -37,7 +37,7 @@ export default function Posts__card(props) {
         <div
           className="card__likes"
           style={{ hover }}
-          onClick={()=>hoverIn()}
+          onMouseOver={()=>hoverIn()}
           onMouseLeave={()=>hoverOut()}
         >
           <span className="likes">
