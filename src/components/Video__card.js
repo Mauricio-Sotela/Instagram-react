@@ -9,7 +9,7 @@ export default function Posts__card(props) {
     },
   });
   const hoverIn = () => {
-    alert('HoverIn')
+   
     setHover({
       style: {
         display: "flex",
