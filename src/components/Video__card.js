@@ -9,13 +9,13 @@ export default function Posts__card(props) {
     },
   });
   const hoverIn = () => {
-   
-    setHover({
-      style: {
-        display: "flex",
-        cursor: "pointer",
-      },
-    });
+    alert('HoverIn')
+    // setHover({
+    //   style: {
+    //     display: "flex",
+    //     cursor: "pointer",
+    //   },
+    // });
   };
   const hoverOut = () => {
     setHover({
@@ -37,8 +37,8 @@ export default function Posts__card(props) {
         <div
           className="card__likes"
           style={{ hover }}
-          onMouseOver={()=>hoverIn()}
-          onMouseLeave={()=>hoverOut()}
+          onClick={()=>hoverIn()}
+          onMouseLeave={()=>hoverOut}
         >
           <span className="likes">
             <span class="material-icons">favorite</span>

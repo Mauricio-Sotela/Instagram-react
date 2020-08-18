@@ -2,40 +2,39 @@ import React, { useState } from "react";
 
 export default function Posts__card(props) {
   const [hover, setHover] = useState({
-    style: {
-      display: "none",
-      cursor: "pointer",
-    },
+    style: { opacity: 0, cursor: "initial" },
   });
-  const hoverIn = () => {
+  const hoverIn = (id) => {
    
     setHover({
       style: {
-        display: "flex",
+        opacity: 1,
         cursor: "pointer",
       },
     });
   };
-  const hoverOut = () => {
+  const hoverOut = (id) => {
     setHover({
       style: {
-        display: "none",
+        opacity: 0,
         cursor: "initial",
       },
     });
-    
   };
   const cards = props.cards.map((card) => {
+
+
+    
     const { id, name, likes, comments, url } = card;
     return (
       <div className="card" key={id}>
         <img key={id} src={url} alt={name} />
 
-        <div
+        <div key={id}
           className="card__likes"
           style={hover.style}
-          onClick={() => hoverIn()}
-          // onMouseLeave={() => hoverOut()}
+          onMouseOver={({id}) => hoverIn(id)}
+          onMouseLeave={({id}) => hoverOut(id)}
         >
           <span className="likes">
             <span class="material-icons">favorite</span>
