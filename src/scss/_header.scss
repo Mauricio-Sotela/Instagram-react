@@ -119,6 +119,7 @@
     }
     .card__likes {
        display: flex;
+       opacity: 0;
       justify-content: center;
       align-items: center;
       width: 100%;
@@ -126,6 +127,10 @@
       position: absolute;
       color: white;
       font-size: 1.2rem;
+      &:hover{
+        opacity: 1;
+        cursor: pointer;
+      }
       span:last-of-type {
         margin-left: 1rem;
         

@@ -1,26 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Posts__card(props) {
-  const [hover, setHover] = useState({
-    style: { opacity: 0, cursor: "initial" },
-  });
-  const hoverIn = (id) => {
-   
-    setHover({
-      style: {
-        opacity: 1,
-        cursor: "pointer",
-      },
-    });
-  };
-  const hoverOut = (id) => {
-    setHover({
-      style: {
-        opacity: 0,
-        cursor: "initial",
-      },
-    });
-  };
+  
   const cards = props.cards.map((card) => {
 
 
@@ -32,9 +13,8 @@ export default function Posts__card(props) {
 
         <div key={id}
           className="card__likes"
-          style={hover.style}
-          onMouseOver={({id}) => hoverIn(id)}
-          onMouseLeave={({id}) => hoverOut(id)}
+         
+          
         >
           <span className="likes">
             <span class="material-icons">favorite</span>
