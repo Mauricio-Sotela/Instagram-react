@@ -27,7 +27,7 @@ export default function Header(props) {
   };
 
   return (
-    <div className="container mt-3">
+    <div className="container mt-3 header">
       {/* TOP DIV */}
       <div className="row">
         {/* LEFT---LOGO */}
@@ -90,7 +90,6 @@ export default function Header(props) {
       </div>
       {/* POSTS- DIV */}
       <div className="container posts__div">
-        
         <div className="card__container">
           <Post__container data={props.data} />
         </div>

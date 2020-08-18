@@ -25,13 +25,14 @@ export default function Posts__card(props) {
       },
     });
   };
+ 
   const cards = props.cards.map((card) => {
-
+ console.log(card);
     
     const { id, name, likes, comments, url } = card;
     return (
       <div className="card">
-        <img key={id} src={url} alt={name} />
+        <video key={id} src={url} type="video/mp4" controls/>
 
         <div
           className="card__likes"
