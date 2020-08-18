@@ -117,7 +117,7 @@
       width: 100%;
     }
     .card__likes {
-      display: flex;
+      // display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
@@ -127,6 +127,7 @@
       font-size: 1.2rem;
       span:last-of-type {
         margin-left: 1rem;
+        
       }
      
     }

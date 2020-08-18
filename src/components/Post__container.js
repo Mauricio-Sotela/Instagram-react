@@ -20,8 +20,8 @@ export default function Post__container(props) {
             </Link>
           </li>
           <li>
-            <Link to="/reals">
-              <span class="material-icons">ondemand_video</span><span>Reals</span>
+            <Link to="/reels">
+              <span class="material-icons">ondemand_video</span><span>Reels</span>
             </Link>
           </li>
         </ul>
@@ -35,7 +35,7 @@ export default function Post__container(props) {
           <Route path="/video">
             <Video__card cards={props.data.videos} />
           </Route>
-          <Route path="/reals">
+          <Route path="/reels">
             <Posts__card cards={props.data.tags} />
           </Route>
         </Switch>
