@@ -1,9 +1,30 @@
-
-.container {
-  max-width: 1200px;
-  .menu__icons{
+.navbar {
+  padding: 0 !important;
+  padding-top: .5rem !important;
+  .container {
+    max-width: 1200px;
+    flex-wrap: nowrap !important;
+    .search_icon{
+      display: none;
+    }
+    .menu__icons {
       display: flex;
       text-align: center;
+    }
   }
+}
 
+@media (max-width: 600px) {
+  .navbar {
+    .container {
+      .form-control {
+        display: none;
+      }
+      .search_icon{
+      display: block;
+      font-size: 1.5rem;
+    }
+    }
+    
+  }
 }

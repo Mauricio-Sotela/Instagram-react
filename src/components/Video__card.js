@@ -1,50 +1,20 @@
 import React, { useState } from "react";
+import { Player } from "video-react";
+import "video-react/dist/video-react.css";
 
-
-export default function Posts__card(props) {
-  const [hover, setHover] = useState({
-    style: {
-      display: "none",
-      cursor: "none",
-    },
-  });
-  const hoverIn = () => {
-    alert('HoverIn')
-    // setHover({
-    //   style: {
-    //     display: "flex",
-    //     cursor: "pointer",
-    //   },
-    // });
-  };
-  const hoverOut = () => {
-    setHover({
-      style: {
-        display: "none",
-        cursor: "none",
-      },
-    });
-  };
- 
-  const cards = props.cards.map((card) => {
- console.log(card);
-    
+export default function Video_card(props) {
+  const video__cards = props.cards.map((card) => {
     const { id, name, likes, comments, url } = card;
     return (
-      <div className="card">
-        <video key={id} src={url} type="video/mp4" controls/>
+      <div className="video__card">
+        <Player autoplay key={id} src={url} />
 
-        <div
-          className="card__likes"
-          style={{ hover }}
-          onClick={()=>hoverIn()}
-          onMouseLeave={()=>hoverOut}
-        >
-          <span className="likes">
+        <div className="video__card__likes">
+          <span className="video__likes">
             <span class="material-icons">favorite</span>
             <span>{likes}</span>
           </span>
-          <span className="comments">
+          <span className="video__comments">
             <span class="material-icons">comment</span>
             <span>{comments}</span>
           </span>
@@ -53,5 +23,5 @@ export default function Posts__card(props) {
     );
   });
 
-  return cards;
+  return video__cards;
 }

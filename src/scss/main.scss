@@ -1,5 +1,6 @@
 @import "menu";
 @import "header";
+@import "video__card";
 
 html::-webkit-scrollbar {
   display: none;
@@ -10,15 +11,13 @@ html {
   scrollbar-width: none;
 }
 .fixed {
-    z-index: 100;
-  position: fixed!important; 
+  z-index: 100;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
   background-color: yellow;
 }
-.header{
-    padding: 7rem;
-    
-  }
-  
+.header {
+  padding: 7rem;
+}

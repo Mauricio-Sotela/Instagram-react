@@ -24,7 +24,8 @@
     "react-fontawesome": "^1.7.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-    "use-state-with-callback": "^1.0.18"
+    "use-state-with-callback": "^1.0.18",
+    "video-react": "^0.14.1"
   },
   "browserslist": {
     "production": [
