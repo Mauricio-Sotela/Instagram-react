@@ -1,5 +1,9 @@
 .navbar {
-  padding: 0 !important;
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: .5rem !important;
   padding-top: .5rem !important;
   .container {
     max-width: 1200px;
@@ -14,9 +18,10 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .navbar {
     .container {
+      
       .form-control {
         display: none;
       }

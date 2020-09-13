@@ -27,11 +27,11 @@ export default function Header(props) {
   };
 
   return (
-    <div className="container mt-3 header">
+    <div className=" header">
       {/* TOP DIV */}
-      <div className="row">
+      <div className="roww">
         {/* LEFT---LOGO */}
-        <div className="col-sm-4 logo__container">
+        <div className="logo__container">
           <div>
             <img
               src={props.data.user.logo}
@@ -41,7 +41,7 @@ export default function Header(props) {
           </div>
         </div>
         {/* RIGHT-- INFO AND ICONS */}
-        <div className="col-sm-8 d-flex flex-column">
+        <div className="d-flex flex-column">
           {/* CHANNEL_NAME... */}
           <div className="channel__div">
             <div className="chanel__container">
@@ -89,7 +89,7 @@ export default function Header(props) {
         </div>
       </div>
       {/* POSTS- DIV */}
-      <div className="container posts__div">
+      <div className=" posts__div">
         <div className="card__container">
           <Post__container data={props.data} />
         </div>

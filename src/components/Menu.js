@@ -6,7 +6,7 @@ import {  Avatar } from "@material-ui/core";
 export default function Menu(props) {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-dark bg-light d-flex justify-content-between border  fixed">
+      <nav className="navbar bg-light d-flex justify-content-between ">
         <div className="container">
           <div>
             <a href="#">
